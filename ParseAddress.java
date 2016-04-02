@@ -11,7 +11,7 @@ Assignment 7
 //directions for the user to get from one location to another
 
 //URLs should be in the form: 
-//https://www.google.com/maps/dir/[Street Address]+[City]+[State Abbreviation]/[Street Address]+[City]+[State Abbreviation]
+//https://www.google.com/maps/dir/[Street Address]+[City]+[State Abbreviation]/[Street Address]+[City]+[State Abbreviation]/
 //with all spaces replaced with "+".
 
 public class ParseAddress
