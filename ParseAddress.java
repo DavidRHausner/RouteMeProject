@@ -22,7 +22,7 @@ public class ParseAddress
   public ParseAddress(String street_A, String city_A, String state_A, String street_B, String city_B, String state_B)
   {
   	this.trip_url = "https://www.google.com/maps/dir/" + street_A.replace(' ','+') + "+" + city_A.replace(' ','+') + "+" + state_A.replace(' ','+') + "/";
-  	this.trip_url += street_B.replace(' ','+') + "+" + city_B.replace(' ','+') + "+" + state_B.replace(' ','+');
+  	this.trip_url += street_B.replace(' ','+') + "+" + city_B.replace(' ','+') + "+" + state_B.replace(' ','+') + "/";
   	System.out.println(trip_url);
   }
 }
