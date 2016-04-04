@@ -1,0 +1,13 @@
+UserLoginMapper partitionKey = new UserLoginMapper();
+
+partitionKey.setUserID(1000);
+DynamoDBQueryExpression<UserLoginMapper> queryExpression = 
+new DynamoDBQueryExpression<UserLoginMapper>()
+    .withHashKeyValues(partitionKey);
+
+List<UserLoginMapper> itemList = mapper.query(UserLoginMapper.class, queryExpression);
+
+for (int i = 0; i < itemList.size(); i++) {
+    System.out.println(itemList.get(i).getUserID());
+    System.out.println(itemList.get(i).getUserName());
+}

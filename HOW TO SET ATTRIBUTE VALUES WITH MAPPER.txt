@@ -1,0 +1,11 @@
+AmazonDynamoDBClient client = new AmazonDynamoDBClient(new ProfileCredentialsProvider());
+
+DynamoDBMapper mapper = new DynamoDBMapper(client);
+
+UserLoginMapper NewUser = new UserLoginMapper();
+item.setUserID(100);
+item.setUserName("I Need Directions");
+item.setUserPassword(1234567890);
+
+mapper.save(NewUser);   
+
