@@ -24,7 +24,7 @@ public class ParseAddress
   {
   	this.trip_url = "https://www.google.com/maps/dir/" + street_A.replace(' ','+') + "+" + city_A.replace(' ','+') + "+" + state_A.replace(' ','+') + "/";
   	this.trip_url += street_B.replace(' ','+') + "+" + city_B.replace(' ','+') + "+" + state_B.replace(' ','+');
-  	System.out.println(trip_url);
+  	getURL();
   }
   //Takes in an ArrayList with addresses grouped in bunches of three (street, city, state) and returns the extended route URL.
   //The only caveat is that any information not entered by the user must be sent to this program as a "" (empty string). Otherwise
@@ -34,16 +34,20 @@ public class ParseAddress
   	String street;
   	String city;
   	String state;
-  	String route_URL = "https://www.google.com/maps/dir/";
   	int counter = 0;
+  	this.trip_url = "https://www.google.com/maps/dir/";
   	while ((3*counter) < addresses.size()-1)
   	{
   		street = addresses.get(3*counter);
   		city = addresses.get(3*counter+1);
   		state = addresses.get(3*counter+2);
-  		route_URL += street.replace(' ','+') + "+" + city.replace(' ','+') + "+" + state.replace(' ','+') + "/";
+  		this.trip_url += street.replace(' ','+') + "+" + city.replace(' ','+') + "+" + state.replace(' ','+') + "/";
   		counter++;
   	}
-  	System.out.println(route_URL);
+  	getURL();
+  }
+  public String getURL()
+  {
+  	return trip_url;
   }
 }
