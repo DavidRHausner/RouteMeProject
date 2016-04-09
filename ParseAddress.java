@@ -1,7 +1,6 @@
 /*
 Hausner, David
 CEN 4021
-Assignment 7
 03-26-2016
 Updated 4-9-2016
 */
